@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:cofrin/storage/hive_service.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveService.init();
   runApp(const MyApp());
 }
 
